@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect
 import pymongo
+import scrape_mars
 
 # Instantiate Flask app
 app = Flask(__name__)
@@ -13,6 +14,7 @@ db = client.mars_app
 
 # Connect to mars collection
 mars_coll = db.mars
+
 
 @app.route('/')
 def index():
